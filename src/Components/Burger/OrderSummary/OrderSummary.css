@@ -1,0 +1,43 @@
+.OrderSummary {
+  padding: 10px;
+  color: #252422;
+}
+
+.OrderSummary header {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.OrderSummary ul li {
+  font-size: 0.7rem;
+}
+
+.OrderSummary p {
+  font-size: 0.7rem;
+  margin: 5px 0 5px 0;
+}
+
+.OrderSummary footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.OrderSummary footer button {
+  padding: 5px 20px;
+  margin-left: 10px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #ff6700;
+  color: #ff6700;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 300ms;
+}
+
+.OrderSummary footer button:active,
+.OrderSummary footer button:hover,
+.OrderSummary footer button:focus {
+  background-color: #ff6000;
+  color: #ebebeb;
+  outline: none;
+}

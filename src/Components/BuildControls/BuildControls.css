@@ -28,7 +28,7 @@
   position: relative;
   color: #04328f;
   font-weight: bold;
-  transition: background-color 500ms;
+  transition: background-color 500ms, border 100ms;
 }
 
 .OrderButton:hover,
@@ -37,7 +37,7 @@
 }
 
 .OrderButton:active {
-  border: 1px inset;
+  border: 2px inset white;
 }
 
 .OrderButton:disabled {

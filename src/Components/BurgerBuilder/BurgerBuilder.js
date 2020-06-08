@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Burger from "../Burger/Burger";
 import BuildControls from "../BuildControls/BuildControls";
+import Modal from "../UI/Modal/Modal";
+import OrderSummary from "../Burger/OrderSummary/OrderSummary";
 
 const INGREDIENT_PRICE = {
   salad: 15,
@@ -18,6 +20,7 @@ class BurgerBuilder extends Component {
       meat: 0,
     },
     totalPrice: 40,
+    openOrderSummaryModal: false,
   };
 
   addIngredientHandler = (type) => {
@@ -26,7 +29,7 @@ class BurgerBuilder extends Component {
     ingredients[type] = currentCount + 1;
     const currentPrice = this.state.totalPrice;
     const newPrice = currentPrice + INGREDIENT_PRICE[type];
-    this.setState({ totalPrice: newPrice, ingredients: ingredients });
+    this.setState({ totalPrice: newPrice, ingredients });
   };
 
   removeIngredientHandler = (type) => {
@@ -37,7 +40,7 @@ class BurgerBuilder extends Component {
     }
     const currentPrice = this.state.totalPrice;
     const newPrice = currentPrice - INGREDIENT_PRICE[type];
-    this.setState({ totalPrice: newPrice, ingredients: ingredients });
+    this.setState({ totalPrice: newPrice, ingredients });
   };
 
   isPurchasable = () => {
@@ -55,10 +58,28 @@ class BurgerBuilder extends Component {
     return isOk;
   };
 
+  handleOrderSummaryModal = () => {
+    this.setState(({ openOrderSummaryModal }) => ({
+      openOrderSummaryModal: !openOrderSummaryModal,
+    }));
+  };
+
   render() {
-    const { ingredients, totalPrice } = this.state;
+    const { ingredients, totalPrice, openOrderSummaryModal } = this.state;
     return (
       <React.Fragment>
+        <Modal
+          headerText="Your Order"
+          show={openOrderSummaryModal}
+          closeModal={this.handleOrderSummaryModal}
+        >
+          <OrderSummary
+            ingredients={ingredients}
+            price={totalPrice}
+            closeModal={this.handleOrderSummaryModal}
+          />
+        </Modal>
+
         <Burger ingredients={ingredients} />
         <BuildControls
           ingredients={ingredients}
@@ -66,6 +87,7 @@ class BurgerBuilder extends Component {
           removeIngredientHandler={this.removeIngredientHandler}
           purchasable={this.isPurchasable()}
           price={totalPrice}
+          handleOrderSummaryModal={this.handleOrderSummaryModal}
         />
       </React.Fragment>
     );

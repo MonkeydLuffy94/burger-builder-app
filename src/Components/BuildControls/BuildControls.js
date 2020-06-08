@@ -15,6 +15,7 @@ const BuildControls = ({
   ingredients,
   price,
   purchasable,
+  handleOrderSummaryModal,
 }) => (
   <div className={styles.BuildControls}>
     <p>Total price: {price}</p>
@@ -29,7 +30,11 @@ const BuildControls = ({
         ingredientCount={ingredients[controlItem.type]}
       />
     ))}
-    <button className={styles.OrderButton} disabled={!purchasable}>
+    <button
+      className={styles.OrderButton}
+      disabled={!purchasable}
+      onClick={handleOrderSummaryModal}
+    >
       <i className="fab fa-opencart" />
       Order
     </button>

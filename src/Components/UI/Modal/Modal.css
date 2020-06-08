@@ -1,0 +1,59 @@
+.Modal {
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  width: fit-content;
+  border-radius: 6px;
+  box-shadow: 1px 1px 20px #403d39;
+  left: 50%;
+  top: 30%;
+  transform: translateY(-200px);
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+.ModalHeader {
+  height: 20px;
+  padding: 10px;
+  background-color: #ff6700;
+  color: #ebebeb;
+  border-radius: 6px 6px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ModalHeader h5 {
+  margin: 0px;
+}
+
+.ModalHeader button {
+  background-color: transparent;
+  border: solid transparent;
+  height: 40px;
+  width: 40px;
+  margin: -10px -10px 0px 0px;
+  border-top-right-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #ebebeb;
+  transition: all 200ms;
+}
+
+.ModalHeader button:hover {
+  background-color: #d62828;
+  font-size: 1rem;
+}
+
+.ModalHeader button:focus,
+.ModalHeader button:active {
+  outline: none;
+}
+
+.ModalClose {
+  opacity: 0;
+}
+
+.ModalShow {
+  opacity: 1;
+  transform: translateY(0px) translateX(-50%);
+}
