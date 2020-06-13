@@ -26,29 +26,6 @@
   margin: 0px;
 }
 
-.ModalHeader button {
-  background-color: transparent;
-  border: solid transparent;
-  height: 40px;
-  width: 40px;
-  margin: -10px -10px 0px 0px;
-  border-top-right-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: #ebebeb;
-  transition: all 200ms;
-}
-
-.ModalHeader button:hover {
-  background-color: #d62828;
-  font-size: 1rem;
-}
-
-.ModalHeader button:focus,
-.ModalHeader button:active {
-  outline: none;
-}
-
 .ModalClose {
   opacity: 0;
 }

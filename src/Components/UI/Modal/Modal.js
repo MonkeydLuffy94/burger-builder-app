@@ -1,5 +1,6 @@
 import React from "react";
 import Backdrop from "../Backdrop/Backdrop";
+import Button from "../Button/Button";
 import styles from "./Modal.css";
 
 const Modal = ({ children, show, closeModal, headerText }) => {
@@ -13,9 +14,9 @@ const Modal = ({ children, show, closeModal, headerText }) => {
       >
         <header className={styles.ModalHeader}>
           <h5>{headerText}</h5>
-          <button onClick={closeModal}>
+          <Button onClick={closeModal} type="HeaderClose">
             <i class="fas fa-times" />
-          </button>
+          </Button>
         </header>
         {children}
       </div>

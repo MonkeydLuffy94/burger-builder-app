@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./OrderSummary.css";
+import Button from "../../UI/Button/Button";
 
 const OrderSummary = ({ ingredients, price, closeModal }) => {
   const createOrderedList = () => {
@@ -17,11 +18,15 @@ const OrderSummary = ({ ingredients, price, closeModal }) => {
     <div className={styles.OrderSummary}>
       <header>A delicious burger with following ingredients</header>
       <ul>{createOrderedList()}</ul>
-      <p>Price: {`RS.${price}`}</p>
+      <p>
+        Price: <strong>{`RS.${price}`}</strong>
+      </p>
       <p>Continue to checkout?</p>
       <footer>
-        <button onClick={closeModal}>Cancel</button>
-        <button>Continue</button>
+        <Button onClick={closeModal} type="Cancel">
+          Cancel
+        </Button>
+        <Button type="Ok">Continue</Button>
       </footer>
     </div>
   );

@@ -1,0 +1,67 @@
+.Button {
+  padding: 5px 20px;
+  margin-left: 10px;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 300ms;
+}
+
+.Button:active,
+.Button:hover,
+.Button:focus {
+  color: #ebebeb;
+  outline: none;
+}
+
+/* -------------------------------------- */
+
+.Cancel {
+  border: 1px solid #d62828;
+  color: #d62828;
+}
+
+.Cancel:active,
+.Cancel:hover,
+.Cancel:focus {
+  background-color: #d62828;
+}
+
+/* -------------------------------------- */
+
+.Ok {
+  border: 1px solid #ff6700;
+  color: #ff6700;
+}
+
+.Ok:active,
+.Ok:hover,
+.Ok:focus {
+  background-color: #ff6700;
+}
+
+/* -------------------------------------- */
+
+.HeaderClose {
+  background-color: transparent;
+  border: solid transparent;
+  height: 40px;
+  width: 40px;
+  margin: -10px -10px 0px 0px;
+  border-top-right-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #ebebeb;
+  transition: all 200ms;
+}
+
+.HeaderClose:hover {
+  background-color: #d62828;
+  font-size: 1rem;
+}
+
+.HeaderClose:focus,
+.HeaderClose:active {
+  outline: none;
+}
