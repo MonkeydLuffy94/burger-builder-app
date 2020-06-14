@@ -15,7 +15,7 @@ const Modal = ({ children, show, closeModal, headerText }) => {
         <header className={styles.ModalHeader}>
           <h5>{headerText}</h5>
           <Button onClick={closeModal} type="HeaderClose">
-            <i class="fas fa-times" />
+            <i className="fas fa-times" />
           </Button>
         </header>
         {children}

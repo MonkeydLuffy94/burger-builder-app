@@ -10,6 +10,7 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
+  transition: transform 300ms;
 }
 
 .BuildControls p {
@@ -62,4 +63,10 @@
   position: relative;
   right: 49px;
   color: #fff;
+}
+
+@media (max-width: 475px) {
+  .ControlWithSidebarOpened {
+    transform: translateX(-31px);
+  }
 }

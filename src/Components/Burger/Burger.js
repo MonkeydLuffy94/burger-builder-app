@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Burger.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 
-const Burger = ({ ingredients }) => {
+const Burger = ({ ingredients, isOpenSideDrawer }) => {
   let transformedBurger = Object.keys(ingredients)
     .map((ingredientName) => {
       return [...Array(ingredients[ingredientName])].map((_, index) => {
@@ -23,7 +23,11 @@ const Burger = ({ ingredients }) => {
   }
 
   return (
-    <div className={classes.Burger}>
+    <div
+      className={`${classes.Burger} ${
+        isOpenSideDrawer ? classes.BurgerWithSidebar : ""
+      }`}
+    >
       <BurgerIngredient type="bread-top" />
       {transformedBurger}
       <BurgerIngredient type="bread-bottom" />

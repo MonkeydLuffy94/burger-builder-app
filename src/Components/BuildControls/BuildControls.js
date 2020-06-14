@@ -16,8 +16,13 @@ const BuildControls = ({
   price,
   purchasable,
   handleOrderSummaryModal,
+  isOpenSideDrawer,
 }) => (
-  <div className={styles.BuildControls}>
+  <div
+    className={`${styles.BuildControls} ${
+      isOpenSideDrawer ? styles.ControlWithSidebarOpened : ""
+    }`}
+  >
     <p>Total price: {price}</p>
     {controls.map((controlItem) => (
       <BuildControl

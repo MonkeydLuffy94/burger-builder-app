@@ -1,0 +1,66 @@
+.NavigationItem {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.NavigationItem a {
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: background-color 300ms, border-color 500ms, color 500ms;
+}
+
+.NavigationItem a i {
+  transition: all 300ms;
+}
+
+@media (min-width: 476px) {
+  .NavigationItem {
+    padding-top: 5px;
+    margin-left: 10px;
+  }
+
+  .NavigationItem a:hover,
+  .NavigationItem a:active,
+  .NavigationItem a.active {
+    background-color: #03266d;
+    border-color: #00ff9d;
+    border-style: solid;
+    border-width: 1px 1px 5px 1px;
+    color: #00ff9d;
+    padding: 9px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+@media (max-width: 475px) {
+  .NavigationItem a i {
+    height: 39px;
+    width: 39px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .NavigationItem a:hover,
+  .NavigationItem a:active,
+  .NavigationItem a.active {
+    background-color: #00e990;
+  }
+
+  .NavigationItem a:hover i,
+  .NavigationItem a:active i,
+  .NavigationItem a.active i {
+    border-color: #04328f;
+    color: #04328f;
+    font-size: 25px;
+  }
+}

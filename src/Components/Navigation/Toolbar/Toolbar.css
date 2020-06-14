@@ -1,0 +1,45 @@
+.Toolbar {
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #04328f;
+  color: #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.Toolbar nav {
+  height: 100%;
+}
+
+.SIdedrawerToggleMenu {
+  display: none;
+}
+
+@media (min-width: 476px) {
+  .Toolbar {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 475px) {
+  .Toolbar nav {
+    display: none;
+  }
+
+  .SIdedrawerToggleMenu {
+    display: block;
+    margin-right: -4px;
+    height: 55px;
+    width: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

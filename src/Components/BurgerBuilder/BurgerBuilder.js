@@ -66,6 +66,7 @@ class BurgerBuilder extends Component {
 
   render() {
     const { ingredients, totalPrice, openOrderSummaryModal } = this.state;
+    const { isOpenSideDrawer } = this.props;
     return (
       <React.Fragment>
         <Modal
@@ -80,7 +81,7 @@ class BurgerBuilder extends Component {
           />
         </Modal>
 
-        <Burger ingredients={ingredients} />
+        <Burger ingredients={ingredients} isOpenSideDrawer={isOpenSideDrawer} />
         <BuildControls
           ingredients={ingredients}
           handleAddIngredient={this.addIngredientHandler}
@@ -88,6 +89,7 @@ class BurgerBuilder extends Component {
           purchasable={this.isPurchasable()}
           price={totalPrice}
           handleOrderSummaryModal={this.handleOrderSummaryModal}
+          isOpenSideDrawer={isOpenSideDrawer}
         />
       </React.Fragment>
     );
